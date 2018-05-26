@@ -6,7 +6,7 @@
 %
 %   Version
 %       Beta
-%   Created 
+%   Created
 %       2014.03.26 by ywg@USTC
 %   Last Modified
 %       2014.08.29 by whzecomjm@SUSTC
@@ -58,7 +58,7 @@
 %如果一定要用$$...$$输入公式。请在更新到上述版本后加入PlainEquation选项。
 
 \LoadClass[cs4size,a4paper,fancyhdr,fntef]{ctexbook}
-      
+
 %Check if extra pack should be used.
 \ifustc@basic\relax\else\input{sustcxtra.cls}\relax\fi
 
@@ -107,7 +107,7 @@
 		\fi
 	\fi
 \fi
-	
+
 %load basic packages
 \RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm}
 \RequirePackage{titletoc}
@@ -302,7 +302,7 @@
 %\setlength{\baselineskip}{22pt plus1pt minus1pt}
 %\setlength{\textheight}{21true cm}
 %\setlength{\headsep}{1 cm}
-%\setlength{\textwidth}{14.5true cm} 
+%\setlength{\textwidth}{14.5true cm}
 %\setlength{\belowcaptionskip}{5pt}
 
 %Title page setup
@@ -324,7 +324,7 @@
 \renewcommand\author[1]{\def\ustc@author{#1}}
 \ustc@define@term{advisor}
 \ustc@define@term{coadvisor}
-\ustc@define@term{major}%硕士博士论文适用专业全称，不可用缩写。本科论文不需要此项 Not used in bachelor thesis. For master and doctor thesis, use full name -- NEVER use abbr. 
+\ustc@define@term{major}%硕士博士论文适用专业全称，不可用缩写。本科论文不需要此项 Not used in bachelor thesis. For master and doctor thesis, use full name -- NEVER use abbr.
 \ustc@define@term{submitdate}
 \ustc@define@term{depart}%硕士博士论文用院系代号，仅用于书脊。本科论文用院系全称，仅用于扉页 For bachelor use full name(only used in title page). Currently unused for master and doctor
 
@@ -400,11 +400,11 @@
     \bfseries\USTCHUGE\ifustc@doctor
       {博士学位论文}
     \else\ifustc@master
-      {硕士学位论文}  
+      {硕士学位论文}
     \else
       {学士学位论文}
     \fi\fi
-    
+
     \ifustc@bachelor\vskip 1cm\relax\else\vskip 1.5cm\fi
       \includegraphics[width=4.5cm]{ustc_logo_fig.png}
     \ifustc@bachelor\relax\else\vskip 0.5cm\fi %0.75cm
@@ -454,7 +454,7 @@
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
-  \begin{tabular}{lr}CLC\underline{\hspace{2cm}}\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad &Number\underline{\hspace{2cm}}\\ UDC\underline{\hspace{2cm}}&Classification Level\underline{\hspace{2cm}}\end{tabular}\vspace*{1.5cm}
+  \begin{tabular}{lr}CLC\underline{\hspace{2cm}}\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad &Number\underline{\hspace{2cm}}\\ UDC\underline{\hspace{2cm}}&Available for reference $\square$ Yes  $\blacksquare$ No\end{tabular}\vspace*{1.5cm}
     \vskip 0cm
       \USTCLarge{\ttfamily{SOUTH UNIVERSITY OF SCIENCE AND TECHNOLOGY OF CHINA}}
     \vskip 0.0cm
@@ -475,21 +475,21 @@
   \begin{center}
   {\sanhao
   \ifustc@bachelor
-	  \begin{tabular}{lc}
-	  	Author :& \ustc@underline[7cm]{\ustc@enauthor}\\
-	  	Student ID :& \ustc@underline[7cm]{\ustc@studentid}\\	 
-	  	Department :& \ustc@underline[7cm]{\ustc@endepart}\\
-	  	Major :& \ustc@underline[7cm]{\ustc@enmajor}\\
-		Supervisor :& \ustc@underline[7cm]{\ustc@enadvisor}\\
+	  \begin{tabular}{rc}
+	  	Student Name :& \ustc@underline[9cm]{\ustc@enauthor}\\
+	  	Student ID :& \ustc@underline[9cm]{\ustc@studentid}\\
+	  	Department :& \ustc@underline[9cm]{\ustc@endepart}\\
+	  	Program :& \ustc@underline[9cm]{\ustc@enmajor}\\
+		  Thesis Advisor :& \ustc@underline[9cm]{\ustc@enadvisor}\\
 		\ifx\ustc@encoadvisor\@empty\else
 	    Acad. Supervisors:& \ustc@underline[7cm]{\ustc@encoadvisor}\\
 	    \fi
 	    \ifx\ustc@encoadvisorsec\@empty\else
-	                   & \ustc@underline[7cm]{\ustc@encoadvisorsec}\\	
+	                   & \ustc@underline[7cm]{\ustc@encoadvisorsec}\\
 	    \fi
-	  	Finished Time :& \ustc@underline[6cm]{\ustc@ensubmitdate}
+	  	Date :& \ustc@underline[9cm]{\ustc@ensubmitdate}
 	  \end{tabular}
-	  
+
   \else
 	  \begin{tabular}{lc}
 	  	Author :& \ustc@underline[6cm]{\ustc@enauthor}\\
@@ -498,7 +498,7 @@
 		\ifx\ustc@encoadvisor\@empty\else
 	                     & \ustc@underline[6cm]{\ustc@encoadvisor}\\
 	    \fi
-	  	Finished Time :& \ustc@underline[6cm]{\ustc@ensubmitdate}
+	  	Date :& \ustc@underline[9cm]{\ustc@ensubmitdate}
 	  \end{tabular}
   \fi}
   \end{center}
@@ -613,7 +613,7 @@
             \fi
           \fi
         \fi
-      \fi       
+      \fi
     \fi
     \ifx\cover@varen\cover@san\c@sen{#2}{5mm}{0mm}{2.55cm}\else
       \ifx\cover@varen\cover@ssan\c@sen{#2}{5.5mm}{0mm}{2.5cm}\else
@@ -626,7 +626,7 @@
             \fi
           \fi
         \fi
-      \fi       
+      \fi
     \fi
     \newgeometry{top=17.4cm,bottom=1.1cm,left=6cm,right=5.5cm}
     \clearpage
@@ -666,7 +666,7 @@
             \fi
           \fi
         \fi
-      \fi       
+      \fi
     \fi
     \c@sen{17pt}{0cm}{0cm}{10cm}
     \newgeometry{top=2cm,bottom=2cm,left=1.2cm,right=19.5cm}
@@ -699,7 +699,7 @@
     \thispagestyle{empty}
     \cleardoublepage
   \else
-    \clearpage  
+    \clearpage
   \fi
   \restoregeometry
 }
