@@ -1,3 +1,6 @@
+##
+Change some for 2018 undergraduate
+
 # sustcthesis
 This is a graduation thesis latex template for sustcer, including bachelor, master and doctor's thesis template. This template is based on the template of ustc given by [ywg@ustcbbs](https://code.google.com/p/ustcthesis/).
 
