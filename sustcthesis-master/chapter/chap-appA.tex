@@ -1,0 +1,28 @@
+\chapter{The TCP Throughput}
+\label{chap:appA}
+It is known to all networking professionals that Equation \ref{equ_tcpthroughput}
+below is the throughput TCP can achieve at a steady state,
+Equation \ref{equ_tcpthroughputmax} is roughly the maximum throughput TCP
+can achieve.
+\begin{equation}
+ \label{equ_tcpthroughput}
+  Throughput_{TCP}=\frac{min(RWND,CWND)}{RTT}
+\end{equation}
+\begin{equation}
+ \label{equ_tcpthroughputmax}
+  Throughput_{TCP_{max}}=\frac{RWND_{max}}{RTT}
+\end{equation}
+where RWND is the receiver window size, CWND is the congestion windows size (at the
+sender side), and RTT is the round trip time.
+Also, theoretically we have Equation 2.3 if considering the loss rate p.
+\begin{equation}
+ \label{equ_tcpthroughputmax}
+  Throughput_{TCP} \approx \frac{1}{RTT}\sqrt{\frac{3}{2p}}
+\end{equation}
+Let’s consider transmitting a data chunk from node A to node B. When the distance
+between A and B gets longer, generally the RTT is larger for a certain type of transmission
+medium. In addition, p is also likely to be larger, as there are likely to be more routers
+along the path from A to B, and their performance, buffer window sizes, and current
+congestion status may vary. Thus, any single node in between can be a bottleneck.
+In addition to the window sizes, the packet loss rate p, and the RTT, there are other
+factors that affect TCP’s performance: the slow-start and the 3-way handshake behaviour.

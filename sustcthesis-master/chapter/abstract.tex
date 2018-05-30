@@ -1,0 +1,44 @@
+\begin{cnabstract}
+近年来，人们对于视频(点播、直播)需求激增，寻找一个成本更低，用户体验更优，满足不断增长的视频播放需求
+的视频内容分发系统迫在眉睫。雾节点（路由器，网络附加存储，智能家庭中心等）有着大量闲置的带宽、
+存储、计算资源，可以很好的利用这些闲置资源来承担视频分发的功能。
+然而，传统的内容分发网络系统以及点对点传输系统
+并不能很好的应用于由数百万雾节点构成的新网络。
+
+本论文中，我们给出了雾计算及其相关领域最新的研究应用进展综述。我们将雾节点构成的网络抽象为一个统一的模型，并且给出了关键
+问题的解决方案。对于我们的算法、协议和架构也进行了讨论。
+
+我们实现的是一个基于雾节点的视频分发系统，其中每个雾节点可以存储一些视频文件，当用户请求播放视频时，存有这些视频的
+雾节点就相当于传统架构中的服务器。用户的随机请求分布符合视频的热度分布。我们的问题可以抽象为如何将视频分发到雾节点上
+并且当用户进行视频播放时，在不影响用户体验的前提下，可以让云服务器的负载最小。
+
+类似于我们讨论的问题的研究已经有了一些结论。本文首先对视频流行特征进行了概述，并对设计这样一个系统的基本原则进行了探讨，
+并且展示了相关系统的最新研究进展。我们还提出并实现了一种简单的（初级版本）基于雾节点的分布式系统架构，
+取得了一些测试数据，并对数据进行了分析研究，并尝试根据分析结果进行一些优化。
+
+最后，我们试图找出一些系统的一些短板，并尝试推断我们未来可以从哪一些方面进行系统的优化。
+
+\keywords{雾计算，内容分发网络(CDN),视频，信息中心网络(ICN),命名数据网络(NDN)}
+\end{cnabstract}
+
+\begin{enabstract}
+With users rapid-growing demand on Video, including "Video-on-demand"(VoD) and Live Streaming and
+its "Quality of Experience"(QoE), video service providers are facing new challenges and topics, those are,
+to provide efficient video content transmission and easy network accessing procedure and application.
+ Under the circumstance, the fog devices(Wi-Fi routers, Network Attached Storage and Smart home center)
+ which have better bandwidth, storage and computation capacities, have come into the spotlight.
+ Fog devices can collaboratively serve the local users by providing a new paradigm for video distribution.
+  However, to coordinately manage millions of fog devices requires  new schemes that are different from
+  both the traditional "Content Delivery Network"(CDN) and the Peer-to-Peer(P2P) schemes.
+
+In this thesis, firstly, we provide an overview of recent research achievement in fog computing and related fields over the past two decades. We generalize the network which composed of fog nodes to a unified mode and give solutions to key problems. Algorithmic, protocol and architectural design principles are also discussed in this section.
+ 
+Then we discuss a fog-based video distribution and access system where each fog nodes can store relatively small number of videos to offload the server when these videos are requested by users. Users’ stochastic requests are predictable based on videos popularity distribution pattern. The problem here is how to distribute the videos to the fog nodes and how to guide the users to get the video from these fog nodes to minimize the server load as well as to obtain a better user experience.
+ 
+Similar issues have been studied recently witsome conclusion being reached to. In this thesis, We first overview the video popularity characteristics and discuss the fundamental challenges to design an effective fog-based video service platform and show the recent achievement on
+some different video distribution and access systems. We also propose a simple(primarily) fog-based distribution and access system architecture, examine its capacities and try to do some optimization.
+ 
+Finally, We try to figure out some related system defects and predict in which way could we optimize the system and make it better.
+
+\enkeywords{Fog computing,Content Delivery Network(CDN), Video,Information Centric Networking(ICN)，Named Data Networking (NDN)}
+\end{enabstract}
